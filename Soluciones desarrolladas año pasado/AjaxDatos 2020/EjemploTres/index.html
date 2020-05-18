@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</head>
+<body>
+    <form  method="post" id=formulario>
+        <input type="text" placeholder="ValorUno" id="text">
+        <span><input type="checkbox" name="check" value="ValorDos" id="check"> ValorDos</span>
+        <input type="submit" value="Enviar Formulario">
+    </form>
+    <div id="Respuesta"></div>
+
+    <script type="text/javascript"> 
+    'use strict';
+    $("#formulario").bind("submit",function(event){
+        // Capturamnos el boton de envío
+        var text = $("#text").text();
+        var check = $("#check").val();
+        $.ajax({
+            type: $(this).attr("method"),
+            url: "pruebaPHP.php",
+            data: {textP: text, 
+                    checkP: check
+                    },
+        
+            success: function(data){
+                /*
+                * Se ejecuta cuando termina la petición y esta ha sido
+                * correcta
+                * */
+                $("#respuesta").html(data);
+            },
+            error: function(data){
+                /*
+                * Se ejecuta si la peticón ha sido erronea
+                * */
+                alert("Problemas al tratar de enviar el formulario");
+            }
+        });
+        // Nos permite cancelar el envio del formulario
+        return false;
+    });
+
+    </script>
+</body>
+</html>

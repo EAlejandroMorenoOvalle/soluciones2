@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery load</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Funcion load()</legend>
+        <button id="load">LOAD</button>
+        <div id="loadContent"></div>
+    </fieldset>
+    <script>
+        $("#load").click(function(){
+            $("#loadContent").load("load.html", function name(params) {
+                console.log("Ejecutado  ");   
+            });
+        });
+    </script>
+    
+</body>
+</html>
