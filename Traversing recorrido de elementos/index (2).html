@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/x-javascript">
+        $(document).ready(()=>{
+            $("#matricula").closest("tr").children("td#nombre").css("background","blue");
+            //$("span").closest("ul").children("td#nombre").css("border", "2px solid blue");
+            
+        });
+        
+    </script>
+   
+</head>
+<body>
+  <table>
+      <thead>
+          <tr>
+              <td>Nombre</td>
+              <td>Edad</td>
+              <td>Matricula</td>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td id="nombre">
+                  Alejandro
+              </td>
+              <td >23 años</td>
+               <td id="matricula">122323</td>
+          </tr>
+         
+      </tbody>
+  </table>
+   
+    
+</body>
+</html>
