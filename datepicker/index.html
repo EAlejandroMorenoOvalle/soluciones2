@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+  <div class="container">
+      <div class="col s12 m3"></div>
+      <div class="col s12 m6">
+          <h3>Datepicker</h3>
+          <form >
+              <div class="input-field">
+                 <input type="text" id="datepicker">
+                  
+              </div>
+          </form>
+      </div>
+      <div class="col s12 m3"></div>
+  </div>
+   
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            const Calender = document.getElementById("datepicker");
+            M.Datepicker.init(Calender,{
+                format:'yyyy-mm-dd',
+                i18n: {
+                months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Set", "Oct", "Nov", "Dic"],
+                weekdays: ["Domingo","Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+                weekdaysShort: ["Dom","Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
+                weekdaysAbbrev: ["D","L", "M", "M", "J", "V", "S"],
+                done:'Guardar',
+                cancel:'Cancelar'    
+            }
+                  
+            });
+            var date = document.getElementById("datepicker");
+            date.addEventListener('focus',()=>{
+               alert(date.value()); 
+            });
+            
+        </script>
+
+</body>
+</html>

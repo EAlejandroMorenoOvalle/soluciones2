@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <style>
+        form{
+            width: 50%;
+            margin: 0 auto;
+        }
+        input[type="text"]{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="button"]{
+            padding: 10px;
+             }
+    </style>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+</head>
+
+<body>
+  
+   <form  method="post">
+      <h1>Envio de datos con ajax</h1>
+       <input type="text" id="nombre" placeholder="Ingrese su nombre">
+       <input type="text" id="aPaterno" placeholder="Ingrese su primer apellido">
+       <input type="text" id="aMaterno" placeholder="Ingrese su segundo apellido">
+       
+       <input type="button" value="Enviar"  onclick="enviarDatos()">
+   </form>
+   
+   <div id="MostrarDatos">
+       
+   </div>
+    
+</body>
+</html>
