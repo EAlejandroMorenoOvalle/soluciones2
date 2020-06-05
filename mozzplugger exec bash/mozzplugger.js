@@ -1,3 +1,4 @@
+ var url = require('url');
 const { exec } = require("child_process");
 // Cargar el modulo HTTP
 var http = require('http');
@@ -8,6 +9,11 @@ function onRequest(request, response) {
   response.writeHead(200, {"Content-Type": "text/html"});
   response.write("Hola Mundo");
   response.end();
+	var q = url.parse(request.url, true);
+	 var qdata = q.query;
+        console.log(qdata.parametroUno);
+        console.log(qdata.parametroDos);
+	/*
 	exec("./bash.sh", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
@@ -18,7 +24,7 @@ function onRequest(request, response) {
         return;
     }
     console.log(`stdout: ${stdout}`);
-});
+});*/
 }
  
 var server = http.createServer(onRequest);
