@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+    <div>
+        <input id ="input" type="text" >
+        <input type="password" name="p" id="p">
+    </div>
+    
+     
+ <script>
+     $(document).ready(function(){
+         console.log("loaded");
+         $("#input").focus();
+         console.log($("#input").focus().length);
+         console.log($("#input2").focus().length);
+     });
+
+     $("#input").focus(function(){
+    		$(this).css("background-color", "red");
+	});
+ </script>   
+</html>
