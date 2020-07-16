@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="toastr.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+</head>
+<body>
+    <script>
+    $(document).ready(function(){
+        // with no title
+//toastr.warning('Warning');
+//toastr.success('Success'); 
+//toastr.info('Info');
+// with a title
+//toastr.error('Error', 'Error Title')
+for(var i = 0; i< 10; i++){
+        toastr.success('Success', 'Success Title',{
+
+// tap to dismiss
+tapToDismiss: true,
+
+// toast class
+toastClass: 'toast',
+
+// container ID
+containerId: 'toast-container',
+
+// debug mode
+debug: false,
+
+// fadeIn, slideDown, and show are built into jQuery
+showMethod: 'slideDown', 
+
+// duration of animation
+showDuration: 1000,
+
+// easing function
+showEasing: 'swing',
+
+// callback function
+onShown: undefined,
+onHidden: undefined,
+
+// hide animation
+hideMethod: 'fadeOut',
+
+// duration of animation
+hideDuration: 1000,
+
+// easing function
+hideEasing: 'swing',
+
+// close animation
+closeMethod: false,
+
+// duration of animation
+closeDuration: false,
+
+// easing function
+closeEasing: false,
+
+// timeout in ms
+extendedTimeOut: 1000,
+
+// you can customize icons here
+iconClasses: {
+  error: 'toast-error',
+  info: 'toast-info',
+  success: 'toast-success',
+  warning: 'toast-warning'
+},
+iconClass: 'toast-success',
+
+// toast-top-center, toast-bottom-center, toast-top-full-width
+// toast-bottom-full-width, toast-top-left, toast-bottom-right
+// toast-bottom-left, toast-top-right
+positionClass: 'toast-top-right',
+
+// set timeOut and extendedTimeOut to 0 to make it sticky
+timeOut: 1000, 
+
+// title class
+titleClass: 'toast-title',
+
+// message class
+messageClass: 'toast-message',
+
+// allows HTML content in the toast?
+escapeHtml: false,
+
+// target container
+target: 'body',
+
+// close button
+closeHtml: '<button type="button">&times;</button>',
+
+// place the newest toast on the top
+newestOnTop: true,
+
+// revent duplicate toasts
+preventDuplicates: true,
+
+// shows progress bar
+progressBar: true
+
+})
+}
+
+    });
+    
+    </script>
+    <script src="toastr.min.js"></script>
+</body>
+</html>
