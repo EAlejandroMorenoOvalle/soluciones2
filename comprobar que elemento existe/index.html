@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div id="divPrueba" style="height: 50%; width:50%; background-color: red;">div</div>
+    <script >
+        $(document).ready(function(){
+            if ($('#divPrueba').length) {
+                alert("Existe el elmento");
+                $("#divPrueba").click(function () {
+                    $(this).effect("highlight", {}, 3000);
+                });
+            } else {
+            alert("No Existe el elmento");
+            }
+        });
+        
+    </script>
+</body>
+</html>
